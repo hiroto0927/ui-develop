@@ -25,6 +25,13 @@ export const tvBaseTextDesgin = tv({
       pre_line: "whitespace-pre-line",
       pre_wrap: "whitespace-pre-wrap",
     },
+    text_spacing: {
+      normal: "tracking-normal",
+      wider: "tracking-wider",
+      widest: "tracking-widest",
+      tight: "tracking-tight",
+      tighter: "tracking-tighter",
+    },
   },
   defaultVariants: {
     font_bold: "base",

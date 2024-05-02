@@ -22,8 +22,10 @@ export default function F_Accordion(props: TPropsAccordion) {
       onClickTitle={() => setToggle(!toggle)}
     >
       <div className="px-5 py-2">
-        <div className="bg-[#f1efef] py-1 px-2 my-3 break-words whitespace-pre-wrap">
-          <Paragraph text_size="md">{props.content}</Paragraph>
+        <div className="mb-5 break-words whitespace-pre-wrap">
+          <Paragraph text_size="md" text_spacing="wider">
+            {props.content}
+          </Paragraph>
         </div>
         <div className="text-right">
           <Paragraph text_size="xs">ユーザーID : {props.userId}</Paragraph>
@@ -44,7 +46,8 @@ const F_AccordionTitle = (props: {
       <H2
         text_size="sm"
         white_space="nowrap"
-        className="truncate w-28 md:w-80 sm:w-56"
+        className="truncate w-28 lg:w-96 md:w-80 sm:w-56"
+        text_spacing="tighter"
       >
         件名 : {props.title}
       </H2>
