@@ -2,7 +2,7 @@
 import Accordion from "@/components/ui-elements/accordions/accordion";
 import H2 from "@/components/ui-elements/texts/h2";
 import Paragraph from "@/components/ui-elements/texts/paragraph";
-import { useState } from "react";
+import useAccordionToggle from "./hooks/accordion-toggle";
 
 type TPropsAccordion = {
   title: string;
@@ -14,12 +14,12 @@ type TPropsAccordion = {
 };
 
 export default function F_Accordion(props: TPropsAccordion) {
-  const [toggle, setToggle] = useState<boolean>(false);
+  const { toggle, changeToggle } = useAccordionToggle();
   return (
     <Accordion
       renderTitle={<F_AccordionTitle {...props} />}
       isOpen={toggle}
-      onClickTitle={() => setToggle(!toggle)}
+      onClickTitle={() => changeToggle()}
     >
       <div className="px-5 py-2">
         <div className="mb-5 break-words whitespace-pre-wrap">
